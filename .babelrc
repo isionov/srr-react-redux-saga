@@ -13,6 +13,9 @@
                 "version": "7.0.0-beta.0"
             }
         ],
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        "@loadable/babel-plugin",
         "babel-plugin-styled-components"
     ],
     "presets": [
@@ -20,7 +23,7 @@
         [
             "@babel/preset-env",
             {
-                "useBuiltIns": "entry",
+                // "useBuiltIns": "entry",
                 "targets": "> 0.25%, not dead, ie >= 11"
             }
         ]

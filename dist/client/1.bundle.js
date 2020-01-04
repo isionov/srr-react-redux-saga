@@ -1,0 +1,2 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[1],{43:function(_,n,t){"use strict";t.r(n),n.default=CatsComponent=function(_){return React.createElement("div",null,"Привет, Котаны!!!")}}}]);
+//# sourceMappingURL=1.bundle.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/shared_components/cats/CatsPage.jsx"],"names":["CatsComponent","props"],"mappings":"qHAAA,OAAeA,wBAAgB,SAAAC,GAC3B,OACE","file":"1.bundle.js","sourcesContent":["export default CatsComponent = props => {\n    return (\n      <div>\n        Привет, Котаны!!!\n      </div>\n    )\n  }"],"sourceRoot":""}
