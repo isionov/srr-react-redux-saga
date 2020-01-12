@@ -17,13 +17,13 @@
         "@babel/plugin-proposal-object-rest-spread",
         "@loadable/babel-plugin",
         "babel-plugin-styled-components",
+        "dynamic-import-node"
     ],
     "presets": [
         "@babel/preset-react",
         [
             "@babel/preset-env",
             {
-                // "useBuiltIns": "entry",
                 "targets": "> 0.25%, not dead, ie >= 11"
             }
         ]

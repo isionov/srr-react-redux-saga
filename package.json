@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-client": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.client.config.js -p",
-    "build-server": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.server.config.js -p"
+    "build-server": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.server.config.js -p",
+    "build-server1": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.server1.config.js -p"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@loadable/babel-plugin": "^5.11.0",
     "@loadable/webpack-plugin": "^5.7.1",
     "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.1.0",

@@ -1,12 +1,20 @@
 build-client:
-	rm -rf ./dist/client
+	rm -rf ./asstes/client
 	npm run build-client
 
 build-server:
-	rm -rf ./dist/server
+	rm -rf ./asstes/server
 	npm run build-server
+
+build-server1:
+	rm -rf ./asstes/server1
+	npm run build-server1
 
 build:
 	make build-client
 	make build-server
-	node dist/server/main.bundle.js
+	make build-server1
+
+start:
+	make build
+	node assets/server1/server.js

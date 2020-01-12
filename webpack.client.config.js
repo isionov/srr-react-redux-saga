@@ -3,17 +3,13 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin')
 
-const output = path.resolve(__dirname, 'dist/client');
+const output = path.resolve(__dirname, 'assets/client');
 const entry = path.resolve(__dirname, 'src/client/index.js');
 
 const plugins = [
     new HtmlWebpackPlugin({
         template: './src/client/index.pug'
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: 'vendor',
-    //     minChunks: Infinity,
-    // }),
     new LoadablePlugin(),
 ]
 
@@ -39,16 +35,15 @@ const rules = [
 module.exports = {
     entry: {
         main: entry,
-        // vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'redux-saga', 'react-redux'],
     },
+    target: 'web',
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         path: output,
-        publicPath: '/assets/',
+        publicPath: '/assets/client/',
     },
     module: {
         rules
     },
     plugins,
-    devtool: 'source-map',
 }

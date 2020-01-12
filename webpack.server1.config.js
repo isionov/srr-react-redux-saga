@@ -4,9 +4,8 @@ const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin')
 
-const output = path.resolve(__dirname, 'assets/server');
-const entryClient = path.resolve(__dirname, 'src/server/index.js');
-// const entryServer = path.resolve(__dirname, 'src/server/server.js');
+const output = path.resolve(__dirname, 'assets/server1');
+const entryServer = path.resolve(__dirname, 'src/server/server.js');
 
 const plugins = [
     new LoadablePlugin(),
@@ -35,7 +34,7 @@ const rules = [
 
 module.exports = {
     entry: {
-        main: entryClient
+        server: entryServer
     },
     target: 'node',
     output: {

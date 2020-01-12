@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getPhrase, saySmthAction } from '../../modules/home'
-import { sendAction } from '../../store';
+import { renderRoutes } from "react-router-config"
 
 class HomeComponent extends Component {
-  static getInitialProps() {
-    sendAction(saySmthAction('Привет с сервера'));
-  }
-
-  componentDidUpdate() {
+  componentDidMount() {
     const { saySmthAction } = this.props;
 
-    saySmthAction('Привет с клиента');
+    saySmthAction('Привет с клиента didMount');
   }
 
+  // componentDidUpdate() {
+  //   const { saySmthAction } = this.props;
+
+  //   saySmthAction('Привет с клиента didUpdate');
+  // }
+
   render() {
-    const { phrase } = this.props;
+    const { phrase, route } = this.props;
 
     return (
       <div>
-        Привет, Мир!!! { phrase }
+        <div>Привет из дома!!!</div>
+        <div>{ phrase }</div>
+        { renderRoutes(route.routes) }
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  phrase: getPhrase(state),
+  phrase: getPhrase(state)
 });
 
 const mapDispatchToProps = {

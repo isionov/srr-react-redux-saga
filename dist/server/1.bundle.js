@@ -1,2 +1,0 @@
-exports.ids=[1],exports.modules={24:function(t,e,n){"use strict";n.r(e),e.default=CatsComponent=function(t){return React.createElement("div",null,"Привет, Котаны!!!")}}};
-//# sourceMappingURL=1.bundle.js.map

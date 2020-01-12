@@ -10,56 +10,23 @@ import green from '@material-ui/core/colors/green';
 import createSagaMiddleware from 'redux-saga';
 import { rootSaga } from '../modules/rootSaga';
 import { BrowserRouter } from 'react-router-dom';
-import { App } from '../shared_components/app';
+import App from '../shared_components/app';
 import rootReducer from '../modules/rootReducer';
-import { store, runSagas } from '../store';
+import { initStore } from '../store';
 
-// const theme = createMuiTheme({
-//     palette: {
-//         primary: purple,
-//         secondary: green,
-//     },
-//     status: {
-//         danger: 'orange',
-//     },
-// });
+const store = initStore(true);
 
-runSagas();
-
-// const sagaMiddleware = createSagaMiddleware();
-
-// Если спользовать библиотеку connected-react-router (react-router-redux), которая связывает redux и history
-const history = createBrowserHistory();
-
-// const store = createStore(
-//     rootReducer,
-//     preloadedState,
-//     compose(
-//         applyMiddleware(sagaMiddleware),
-//         window.devToolsExtension ? window.devToolsExtension() : f => f,
-//     ),
-// );
-
-// sagaMiddleware.run(rootSaga);
-
-class Main extends Component {
-    render(){
-        return (
-            <BrowserRouter>
-                <App { ...this.props } />
-            </BrowserRouter>
-        );
-    }
-}
+store.runSagas()
 
 loadableReady(() => {
     const root = document.getElementById('root');
-    hydrate(
-        // <ThemeProvider theme={theme}>
-            <Provider store={ store }>
-                <Main />
-            </Provider>,
-        // </ThemeProvider>,
+
+    render(
+        <Provider store={ store }>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </Provider>,
         root
     );
 })
