@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getPhrase, saySmthAction } from '../../modules/home'
-import { renderRoutes } from "react-router-config"
+import { getPhrase, saySmthAction } from '../../modules/home';
+import { renderRoutes } from "react-router-config";
+import styled from 'styled-components';
 
+const StyledDiv = styled.div`color: red;`
 class HomeComponent extends Component {
   // componentDidMount() {
   //   const { saySmthAction } = this.props;
@@ -21,7 +23,7 @@ class HomeComponent extends Component {
 
     return (
       <div>
-        <div>Привет из дома!!!</div>
+        <StyledDiv>Привет из дома!!!</StyledDiv>
         <div>{ phrase }</div>
         { renderRoutes(route.routes) }
       </div>

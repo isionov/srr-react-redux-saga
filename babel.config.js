@@ -18,7 +18,7 @@ function isWebTarget(caller) {
           '@babel/preset-env',
           {
             useBuiltIns: web ? 'entry' : undefined,
-            corejs: web ? 'core-js@3' : false,
+            corejs: web ? { version: 3, proposals: true } : false,
             targets: !web ? { node: 'current' } : "> 0.25%, not dead, ie >= 11",
             // modules: webpack ? false : 'commonjs',
           },
@@ -35,9 +35,14 @@ function isWebTarget(caller) {
               "helpers": true,
               "regenerator": true,
               "useESModules": false,
-              "version": "7.0.0-beta.0"
           }
-      ],
+        ],
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true
+          }
+        ],
         '@babel/plugin-syntax-dynamic-import',
         '@loadable/babel-plugin'
       ],

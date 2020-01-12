@@ -50,7 +50,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.7.7",
+    "@babel/runtime": "^7.8.0",
     "@loadable/component": "^5.11.0",
     "@loadable/server": "^5.11.0",
     "@material-ui/core": "^4.8.2",
@@ -72,7 +72,7 @@
     "redux-actions": "^2.6.5",
     "redux-saga": "^1.1.3",
     "reselect": "^4.0.0",
-    "styled-components": "^5.0.0-rc.3",
+    "styled-components": "^5.0.0-regexrehydrate",
     "typeface-roboto": "0.0.75"
   }
 }

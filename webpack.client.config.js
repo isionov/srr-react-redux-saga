@@ -7,9 +7,6 @@ const output = path.resolve(__dirname, 'assets/client');
 const entry = path.resolve(__dirname, 'src/client/index.js');
 
 const plugins = [
-    // new HtmlWebpackPlugin({
-    //     template: './src/client/index.pug'
-    // }),
     new LoadablePlugin(),
 ]
 

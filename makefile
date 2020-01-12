@@ -14,8 +14,8 @@ build-server1:
 build:
 	make build-client
 	make build-server
-	make build-server1
+	# make build-server1
 
 start:
 	make build
-	node assets/server1/main.js
+	node assets/serverNode/serverNode.js
