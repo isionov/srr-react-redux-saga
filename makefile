@@ -1,13 +1,14 @@
 build-client:
-	rm -rf ./asstes/client
+	rm -rf ./assets/client
 	npm run build-client
+	cp ./src/client/index.html ./assets/client/
 
 build-server:
-	rm -rf ./asstes/server
+	rm -rf ./assets/server
 	npm run build-server
 
 build-server1:
-	rm -rf ./asstes/server1
+	rm -rf ./assets/server1
 	npm run build-server1
 
 build:
@@ -17,4 +18,4 @@ build:
 
 start:
 	make build
-	node assets/server1/server.js
+	node assets/server1/main.js

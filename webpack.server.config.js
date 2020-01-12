@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin')
 
 const output = path.resolve(__dirname, 'assets/server');
-const entryClient = path.resolve(__dirname, 'src/server/index.js');
-// const entryServer = path.resolve(__dirname, 'src/server/server.js');
+const entry = path.resolve(__dirname, 'src/server/index.js');
 
 const plugins = [
     new LoadablePlugin(),
@@ -26,7 +25,7 @@ const rules = [
             {
                 loader: 'babel-loader',
                 options: {
-                    configFile: path.resolve(__dirname, ".babelrcServer.json")
+                    caller: { target: 'node' }
                 }
             }
         ]
@@ -34,9 +33,7 @@ const rules = [
 ]
 
 module.exports = {
-    entry: {
-        main: entryClient
-    },
+    entry,
     target: 'node',
     output: {
         filename: '[name].js',

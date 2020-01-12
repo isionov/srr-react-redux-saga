@@ -7,9 +7,9 @@ const output = path.resolve(__dirname, 'assets/client');
 const entry = path.resolve(__dirname, 'src/client/index.js');
 
 const plugins = [
-    new HtmlWebpackPlugin({
-        template: './src/client/index.pug'
-    }),
+    // new HtmlWebpackPlugin({
+    //     template: './src/client/index.pug'
+    // }),
     new LoadablePlugin(),
 ]
 
@@ -25,7 +25,7 @@ const rules = [
             {
                 loader: 'babel-loader',
                 options: {
-                    babelrc: true
+                    caller: { target: 'web' }
                 }
             }
         ]
@@ -33,9 +33,7 @@ const rules = [
 ]
 
 module.exports = {
-    entry: {
-        main: entry,
-    },
+    entry,
     target: 'web',
     output: {
         filename: '[name].js',

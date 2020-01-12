@@ -4,11 +4,11 @@ import { getPhrase, saySmthAction } from '../../modules/home'
 import { renderRoutes } from "react-router-config"
 
 class HomeComponent extends Component {
-  componentDidMount() {
-    const { saySmthAction } = this.props;
+  // componentDidMount() {
+  //   const { saySmthAction } = this.props;
 
-    saySmthAction('Привет с клиента didMount');
-  }
+  //   saySmthAction('Привет с клиента didMount');
+  // }
 
   // componentDidUpdate() {
   //   const { saySmthAction } = this.props;
