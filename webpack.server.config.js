@@ -45,8 +45,11 @@ const getConfig = serverType => {
         module: {
             rules
         },
-        plugins,
-        externals: nodeExternals(),
+        plugins
+    }
+
+    if(true) {
+        config.externals = nodeExternals();
     }
 
     return config;

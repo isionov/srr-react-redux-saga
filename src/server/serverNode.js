@@ -53,6 +53,7 @@ app.get('*', async (req, res) => {
     });
 
     matchRoutes(routes, url).map((props) => {
+        console.log("!!!---!!! props", props);
         props.route.getInitialProps && props.route.getInitialProps(store.dispatch);
     });
 
